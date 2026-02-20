@@ -1,0 +1,229 @@
+*
+{
+    line-height: 1.5;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header
+{
+    text-align: center;
+    background-color:skyblue;
+    width: 100%;
+}
+h1
+{
+    padding-bottom: 20px;
+    color:purple;
+    
+}
+nav a:hover
+{
+    background-color: blueviolet;
+    
+}
+span
+{
+    margin-left: 100px;
+    animation: blink 1.5s infinite linear ;
+
+}
+img
+{
+    width: 200px;
+    height:200px;
+    background-color:skyblue;
+    border:3px solid pink;
+     border-color: blue;  
+    border-radius:50%;
+    animation: blink 1.5s infinite linear ;
+
+}
+
+@keyframes blink
+{
+    0%
+    {
+        background-color: rgb(128, 118, 118);
+        
+    }
+    50%
+    {
+    background-color: purple;
+    }
+    100%
+    {
+        background-color: brown;
+    }
+}
+ul li
+{
+    font-size: large;
+text-align: center;
+   margin-right: 100px; 
+    display: inline;
+    
+}
+#About
+{
+    
+    gap:40px;
+    font-style: bold;
+    display:flex;
+    width:100%;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgb(77, 113, 197);
+    animation:slidein 5.0s ease;
+
+}
+@keyframes slidein
+{
+    from
+    {
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to
+    {
+        opacity:1;
+        transform: translateY(0);
+    }
+
+}
+body
+{
+    overflow-x: hidden;
+}
+
+#Projects
+{
+ 
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:0;
+    padding:0;
+   
+    text-align: left;
+    font-style: bold;
+    gap:20px;
+
+    
+}
+
+
+p{
+    font-size: x-large;
+}
+.p1
+{background-image: url("back.png");
+    color: antiquewhite;
+    
+}
+.p2
+{
+    background-image: url("back.png");
+    color: antiquewhite;
+}
+.p3
+{
+    background-image: url("back.png");
+    color: antiquewhite;
+}
+/* table
+{
+    width: 90%;
+    border-collapse: collapse;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+}
+tr:hover
+{
+    background-color: rgb(225, 159, 225);
+    cursor: pointer;
+}
+th, td
+{
+    font-size:x-large;
+    border:1px solid rgb(74, 58, 136);
+    padding:10px;
+    text-align: center;
+    
+}
+th{
+    background-color: rgb(123, 163, 206);
+    color:rgb(90, 84, 90);
+} */
+button
+{
+    padding:10px;
+    background-color: rgb(10, 47, 106);
+    font-size: larger;
+    justify-content: center;
+    margin-left: 150px;
+
+    text-align: center;
+    color: azure;
+    cursor: pointer;
+    
+}
+@media(max-width:600px)
+{
+    body
+    {
+        
+        width: 100%;
+        /* overflow-x: hidden; */
+    }
+    header 
+    {
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+
+    }
+    
+    #Projects
+    {
+        grid-template-columns: 1fr;
+    }
+    .e1
+    {
+        overflow-x: auto;
+    }
+
+}
+
+@media(min-width:900px)
+{
+      body
+    {
+        
+        width: 100%;
+        /* overflow-x: hidden; */
+    }
+  #Projects
+    {
+        grid-template-columns: repeat(2,1fr);
+    }   
+}
+@media(min-width:1200px)
+{
+    body
+    {
+        
+        width: 100%;
+        /* overflow-x: hidden; */
+    }
+    header 
+    {
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+
+    }
+  #Projects
+    {
+        grid-template-columns: repeat(3,1fr);
+    }   
+}
